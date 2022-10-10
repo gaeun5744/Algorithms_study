@@ -14,6 +14,6 @@ for i in range(num):
     total_down*=case[i][0]-j
     
   total=total_up/total_down
-  print(total)
+  print(int(total))
 
 
