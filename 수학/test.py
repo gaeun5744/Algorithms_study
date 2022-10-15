@@ -1,1 +1,1 @@
-print(10%7)
+print(int("007"))
