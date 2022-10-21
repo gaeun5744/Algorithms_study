@@ -12,7 +12,7 @@ for i in depArr:
   else:
     calArr.append(int(i))
 
-sum=calArr.pop()
+sum=calArr.pop(0)
 for k in calArr:
   sum-=k
 
