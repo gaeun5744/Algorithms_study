@@ -1,5 +1,7 @@
 a,b=map(int,input().split())
 
+
+
 def fac(num):
   total=1
   for i in range(1,num+1):

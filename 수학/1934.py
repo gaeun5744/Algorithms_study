@@ -6,4 +6,4 @@ for _ in range(T):
     while B>0:
         A,B = B, A%B
 
-    print(result//A)
+    print(A)

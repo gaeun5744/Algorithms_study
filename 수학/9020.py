@@ -13,8 +13,8 @@ for _ in range(N):
   a=int(n/2)
   b=int(n/2)
   while i(a)!=1 or i(b)!=1:
-    a+=1
-    b-=1
+    a-=1
+    b+=1
   result.append([a,b])
 
 
