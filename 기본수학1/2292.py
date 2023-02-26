@@ -1,18 +1,16 @@
-n=int(input())
+N=int(input())
+bang=0
+gap=1
 
-if n==1:
-  print(1)
-else:
-  n=n/6
-  a=0
-  tap=1
 
-  while a<n:
-    a+=tap
-    tap+=1
+while True:
+  if N>bang*6+1:
+    bang+=gap
+    gap+=1
+  else:
+    break
 
-  print(tap)
-
+print(gap)
 
 
 
