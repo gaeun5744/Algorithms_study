@@ -7,15 +7,15 @@ for i in range(T):
   
   peo=[i for i in range(1,n+1)]
 
-  print(peo)
 
-  for j in range(k):
-    for x in range(n):
-      for y in range 
-  result.append(peo[n-1])
+  for _ in range(k):
+    for j in range(1,n):
+      peo[j]+=peo[j-1]
 
-print(result)
+  result.append(peo[-1])
 
+for i in range(T):
+  print(result[i])
 
 
 
