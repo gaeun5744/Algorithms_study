@@ -6,7 +6,7 @@ for i in range(Num):
   H,W,N=map(int,input().split())
 
   if N%H==0:
-    num="6"
+    num=str(H)
   else:
     num=str(N%H)
 
