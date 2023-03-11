@@ -1,2 +1,2 @@
-peo=[1,2,3]
-print(len(peo))
+for i in range(2,2):
+    print(i)

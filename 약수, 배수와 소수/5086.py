@@ -5,7 +5,7 @@ while True:
     break
 
   if A<B and B%A==0:
-    result.append("factore")
+    result.append("factor")
   elif A>B and A%B==0:
     result.append("multiple")
   else:

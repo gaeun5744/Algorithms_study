@@ -21,4 +21,4 @@ for num in In:
       print(peo[i],"+",end=" ")
     print(peo[-1])
   else:
-    print(num,"is NOT perfect")
+    print(num,"is NOT perfect.")
