@@ -1,19 +1,30 @@
-N,K=map(int,input().split())
-count=0
+def solution(n, lost, reserve):
+    answer = 0
 
-while(True):
-  if (N%K==0):
-    break
-  else:
-    N-=1
-    count+=1
+    lostCopy=lost.copy()
+    reserveCopy=reserve.copy()
+    for i in lostCopy:
+        for j in reserveCopy:
+            if i==j:
+                lost.remove(i)
+                reserve.remove(i)
 
-while(True):
-  N=N//K
-  count+=1
-  if(N==1):
-    break
+    lostCopy=sorted(lost.copy())
+    reserveCopy=sorted(reserve.copy())
 
-print(count)
 
-  
+
+    for i in lostCopy:
+        for j in reserveCopy:
+            if i == j+1 or i == j-1:
+                if i in lost and j in reserve:
+                    reserve.remove(j)
+                    lost.remove(i)
+
+
+    answer=n-len(lost)
+    
+    
+    return answer
+
+print(solution(10,[1,2,3,4],[1,3,5,7]))
