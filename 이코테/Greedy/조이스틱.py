@@ -1,49 +1,41 @@
 def solution(name):
     answer = 0
+    rightAnswer=0
+    leftAnswer=0
     A=""
+
+    for i in range(len(name)//2):
+      A+="A"
 
     alpha1=["A","B","C","D","E","F","G","H","I","J",
     "K","L","M"]
     alpha2=["N","O","P","Q","R","S","T","U","V","W",
     "X","Y","Z"]
 
-    after=0
-    before=0
+    for al in name:
+        if al in alpha1:
+          answer+=alpha1.index(al)
+        else:
+          answer+=13-alpha2.index(al)
 
-    for i in range(1,len(name)):
-      if name[i]=="A":
-        after+=1
-      else:
-        break
 
+    # right
+    rightAnswer=len(name)-1
     for i in range(1,len(name)):
       if name[-i]=="A":
-        before+=1
+        rightAnswer+=1
       else:
         break
-
-    if after>before: #start left
-      for al in name:
-        if al in alpha1:
-          answer+=alpha1.index(al)
-        else:
-          answer+=13-alpha2.index(al)
-
-      answer+=len(name)-1-after
-
-    else:
-      for al in name:
-        if al in alpha1:
-          answer+=alpha1.index(al)
-        else:
-          answer+=13-alpha2.index(al)
-      answer+=len(name)-1
     
-    for i in range(1,len(name)+1):
-        if name[-i]=="A":
-          answer-=1
-        else:
-          break
+    # else 예시 : JAAAAN
+    # 왔다갔다
+    nameCopy=name.copy()
+    if A in nameCopy:
+      nameCopy=nameCopy.split(A,"")
+    rightleft= i
+    
+
+
 
     return answer
 
